@@ -97,7 +97,7 @@ public class RegisterActivity extends AppCompatActivity {
         if(requestCode==GALLERY_REQUEST_CODE){
             if(data!=null){
                 try{
-                    Uri imageUri=data.getData();
+                    Uri imageUri= data.getData();
                     Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(),imageUri);
                     avatarImage.setImageBitmap(bitmap);
                 }catch (IOException e){
